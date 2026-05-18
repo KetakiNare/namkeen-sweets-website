@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/namkeen-sweets-website/static/css/main.662398fb.css",
+    "main.js": "/namkeen-sweets-website/static/js/main.00a8f4a0.js",
+    "static/js/453.825386d9.chunk.js": "/namkeen-sweets-website/static/js/453.825386d9.chunk.js",
+    "index.html": "/namkeen-sweets-website/index.html",
+    "main.662398fb.css.map": "/namkeen-sweets-website/static/css/main.662398fb.css.map",
+    "main.00a8f4a0.js.map": "/namkeen-sweets-website/static/js/main.00a8f4a0.js.map",
+    "453.825386d9.chunk.js.map": "/namkeen-sweets-website/static/js/453.825386d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.662398fb.css",
+    "static/js/main.00a8f4a0.js"
+  ]
+}
