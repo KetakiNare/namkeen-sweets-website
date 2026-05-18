@@ -76,14 +76,13 @@ const Login = () => {
 
   });
 
-}; // ✅ IMPORTANT FIX
-
+}; 
   return (
     <div className="auth-container">
 
       {/* LEFT IMAGE */}
       <div className="auth-left">
-        <img src="/login.png" alt="login" />
+       <img src={process.env.PUBLIC_URL + "/login.png"} alt="login" />
       </div>
 
       {/* RIGHT FORM */}

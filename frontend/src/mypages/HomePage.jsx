@@ -29,7 +29,7 @@ const navigate = useNavigate();
 
       {/* HERO */}
       <div className="hero">
-        <img src="/images/homesweet.jpg" alt="Hero" />
+        <img src={process.env.PUBLIC_URL + "/images/homesweet.jpg"} alt="Hero" />
         <div className="hero-text">
           <h1>Sweets & Namkeens 😍</h1>
           <p>Fresh | Authentic | Homemade Taste</p>
@@ -43,27 +43,27 @@ const navigate = useNavigate();
 
         <div className="category-grid">
           <div className="cat-card">
-            <img src="/images/kesar-peda.jpg" alt="" />
+            <img src={process.env.PUBLIC_URL + "/images/kesar-peda.jpg"} alt="" />
             <p>Kesar Peda</p>
           </div>
 
           <div className="cat-card">
-            <img src="/images/ladoo.jpg" alt="" />
+           <img src={process.env.PUBLIC_URL + "/images/ladoo.jpg"} alt="" />
             <p>Ladoo</p>
           </div>
 
           <div className="cat-card">
-            <img src="/images/bhel.jpg" alt="" />
+            <img src={process.env.PUBLIC_URL + "/images/bhel.jpg"} alt="" />
             <p>Bhel</p>
           </div>
 
           <div className="cat-card">
-            <img src="/images/Kaju-Katli.jpg" alt="" />
+           <img src={process.env.PUBLIC_URL + "/images/Kaju-Katli.jpg"} alt="" />
             <p>Barfi</p>
           </div>
 
           <div className="cat-card">
-            <img src="/images/namkeen-mix.jpg" alt="" />
+           <img src={process.env.PUBLIC_URL + "/images/namkeen-mix.jpg"} alt="" />
             <p>Namkeen Mix</p>
           </div>
         </div>
@@ -77,7 +77,7 @@ const navigate = useNavigate();
 
           {/* PRODUCT CARD */}
           <div className="product-card">
-            <img src="/images/black-raisins.jpg" alt="" />
+            <img src={process.env.PUBLIC_URL + "/images/black-raisins.jpg"} alt="" />
             <h3>Black Raisins Delight</h3>
             <h4>₹682.00</h4>
             <p className="desc">Premium black raisins sweet delight</p>
@@ -94,7 +94,7 @@ const navigate = useNavigate();
           </div>
 
           <div className="product-card">
-            <img src="/images/anjeer-rose.jpg" alt="" />
+           <img src={process.env.PUBLIC_URL + "/images/anjeer-rose.jpg"} alt="" />
             <h3>Anjeer Rose Delight</h3>
             <h4>₹1,217.00</h4>
             <p className="desc">Delicious anjeer sweet with rose flavor</p>
@@ -111,7 +111,7 @@ const navigate = useNavigate();
           </div>
 
           <div className="product-card">
-            <img src="/images/Dried-mango.jpg" alt="" />
+            <img src={process.env.PUBLIC_URL + "/images/Dried-mango.jpg"} alt="" />
             <h3>Dried Mango Delight</h3>
             <h4>₹764.00</h4>
             <p className="desc">Tasty dried mango sweet treat</p>

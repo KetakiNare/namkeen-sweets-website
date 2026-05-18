@@ -66,7 +66,7 @@ const Signup = () => {
 
       {/* LEFT */}
       <div className="auth-left">
-        <img src="/login.png" alt="signup" />
+       <img src={process.env.PUBLIC_URL + "/login.png"} alt="login" />
       </div>
 
       {/* RIGHT */}

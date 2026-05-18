@@ -70,8 +70,6 @@ const searchTerm =
   };
 
 
-
-
   // IMAGE
   const handleImage = (e) => {
 
@@ -80,8 +78,6 @@ const searchTerm =
     );
 
   };
-
-
 
 
   // USER
@@ -131,10 +127,6 @@ const searchTerm =
       .catch(console.log);
 
   };
-
-
-
-
 
   // ADMIN
 
@@ -223,103 +215,44 @@ const searchTerm =
   };
 
 
-
-
-
-  const deleteProduct = (id) => {
-
-    axios
-      .delete(
-        `http://localhost:5000/products/${id}`
-      )
-
+  const deleteProduct = (id) => {axios.delete(`http://localhost:5000/products/${id}`)
       .then(() => {
-
         alert(
           "Product Removed"
         );
-
         fetchProducts();
-
       })
-
       .catch(console.log);
 
   };
 
-
-
-
-
-  const updateQuantity = (
-    id,
-    qty
-  ) => {
-
-    axios
-      .put(
-        `http://localhost:5000/products/${id}`,
+  const updateQuantity = (id,qty) => {axios.put(`http://localhost:5000/products/${id}`,
         {
           quantity: qty
         }
       )
-
       .then(() => {
-
-        fetchProducts();
-
+       fetchProducts();
       })
+        .catch(console.log);};
 
-      .catch(console.log);
-
-  };
-
-const filteredProducts =
-
-  products.filter(
-
-    (item) =>
-
-      item.name
-
-        .toLowerCase()
-
-        .includes(
-          searchTerm
-        )
-
-  );
-
-
+const filteredProducts =products.filter((item) =>item.name.toLowerCase().includes(searchTerm));
 
   return (
-
     <div className="productlist">
-
       <h2>
         All Products
       </h2>
 
-
-
       {/* ADMIN PANEL */}
       {role === "admin" && (
-
         <div className="admin-panel">
-
           <h3>
             Add Product
           </h3>
 
-
-
-          <input
-            placeholder="Product Name"
-            value={
-              newProduct.name
-            }
-            onChange={(e) =>
-              setNewProduct({
+          <input placeholder="Product Name" value={newProduct.name} onChange={(e) =>
+          setNewProduct({
                 ...newProduct,
                 name:
                   e.target
@@ -328,24 +261,9 @@ const filteredProducts =
             }
           />
 
-
-
-          <input
-            placeholder="Price"
-            value={
-              newProduct.price
-            }
-            onChange={(e) =>
-              setNewProduct({
-                ...newProduct,
-                price:
-                  e.target
-                    .value
-              })
-            }
-          />
-
-
+          <input placeholder="Price" value={newProduct.price}
+            onChange={(e) => setNewProduct({...newProduct,price:e.target .value})}
+            />
 
           <input
             placeholder="Quantity"
@@ -362,8 +280,6 @@ const filteredProducts =
             }
           />
 
-
-
           <input
             type="file"
             accept="image/*"
@@ -371,8 +287,6 @@ const filteredProducts =
               handleImage
             }
           />
-
-
 
           <input
             placeholder="Description"
@@ -388,8 +302,6 @@ const filteredProducts =
               })
             }
           />
-
-
 
           <button
             onClick={
@@ -417,29 +329,17 @@ const filteredProducts =
   className={
 
     item.quantity === 0
-
       ? "productlist-card sold-out"
-
       : "productlist-card"
-
   }
 
   key={item.id}
-
 >
-              <img
-                src={item.image}
-                alt=""
-              />
+              <img src={item.image}alt=""/>
 
 {item.quantity === 0 && (
 
-  <span className="sold-badge">
-
-    Sold Out
-
-  </span>
-
+  <span className="sold-badge">Sold Out</span>
 )}
 
               <h3>
@@ -453,61 +353,29 @@ const filteredProducts =
 
 
               <p>
-
-  {item.quantity > 0
-
-  ? `Stock: ${item.quantity}`
-
-  : "Sold Out"}
-
-</p>
+             {item.quantity > 0 ? `Stock: ${item.quantity}` : "Sold Out"}
+             </p>
 
 
-              <p
-                className="desc"
-              >
+              <p className="desc">
                 {
                   item.description
                 }
               </p>
 
-
-
-
               <div className="btn-row">
-
-
                 {/* USER */}
                 {role !==
                   "admin" && (
                   <>
+                   <button className="cart-btn" disabled={ item.quantity === 0}
+                    onClick={() =>
+                   addToCart(item.id)
+                   }>
 
-                   <button
+                  {item.quantity > 0  ? "Add to Cart" : "Sold Out"}</button>
 
-  className="cart-btn"
-
-  disabled={
-    item.quantity === 0
-  }
-
-  onClick={() =>
-    addToCart(item.id)
-  }
-
->
-
-  {item.quantity > 0
-
-    ? "Add to Cart"
-
-    : "Sold Out"}
-
-</button>
-
- 
-
-                    <button
-                      className="wishlist-btn"
+                    <button className="wishlist-btn"
                       onClick={() =>
                         addToWishlist(
                           item.id
@@ -516,11 +384,8 @@ const filteredProducts =
                     >
                       ❤️
                     </button>
-
                   </>
                 )}
-
-
 
 
                 {/* ADMIN */}
