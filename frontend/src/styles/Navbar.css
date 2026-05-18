@@ -1,0 +1,195 @@
+/* 🌈 GLOBAL NAVBAR */
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 🔝 TOP BAR */
+.top-bar {
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  color: white;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  font-weight: 500;
+}
+
+/* 🧭 MAIN NAV */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 5;
+}
+
+/* 🔍 SEARCH */
+.search {
+  position: relative;
+}
+
+.search input {
+  padding: 10px 40px 10px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  width: 220px;
+  background: #fff;
+}
+
+.search input:focus {
+  width: 260px;
+  transition: 0.3s;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff6a00;
+}
+
+/* 🏷 LOGO */
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* 🎯 ICONS */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.icon, .cart {
+  font-size: 20px;
+  color: white;
+  transition: 0.3s;
+}
+
+.icon:hover, .cart:hover {
+  transform: scale(1.2);
+  color: #ffe600;
+}
+
+/* 🛒 CART BADGE */
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* 👤 USER MENU */
+.user-menu {
+  position: relative;
+}
+
+.user-icon {
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user-icon:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  min-width: 170px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.dropdown a {
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown a:hover {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: white;
+}
+
+/* LOGOUT */
+.logout {
+  color: #ff4d4d;
+  font-weight: 500;
+}
+
+.logout:hover {
+  background: #ffe6e6;
+  color: red;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 12px;
+  background: white;
+}
+
+.menu span {
+  cursor: pointer;
+  position: relative;
+}
+
+.menu span:hover {
+  color: #ee0979;
+}
+
+.menu span::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #ee0979;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.menu span:hover::after {
+  width: 100%;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

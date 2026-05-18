@@ -1,0 +1,17 @@
+.product-page {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.product-page img {
+  width: 300px;
+}
+
+.product-page button {
+  padding: 10px 20px;
+  background: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

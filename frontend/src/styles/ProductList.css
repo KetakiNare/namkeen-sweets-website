@@ -1,0 +1,131 @@
+/* 🌐 PRODUCT LIST PAGE */
+.productlist {
+  padding: 40px 20px;
+  background: #f8f9fb;
+}
+
+/* TITLE */
+.productlist h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* ✅ GRID: 4 PER ROW */
+.productlist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.productlist-card {
+  background: white;
+  border-radius: 18px;
+  padding: 15px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productlist-card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE */
+.productlist-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* TEXT */
+.productlist-card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.productlist-card h4 {
+  color: #ff4d4d;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+/* BUTTON ROW */
+.btn-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* CART BUTTON */
+.cart-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: white;
+  cursor: pointer;
+}
+
+/* WISHLIST */
+.wishlist-btn {
+  width: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+.sold-out {
+
+  opacity: 0.6;
+
+  filter: grayscale(100%);
+
+  position: relative;
+
+}
+
+
+.sold-badge {
+
+  position: absolute;
+
+  top: 10px;
+
+  right: 10px;
+
+  background: #444;
+
+  color: white;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+}
+
+
+.cart-btn:disabled {
+
+  cursor: not-allowed;
+
+  opacity: 0.7;
+
+}
